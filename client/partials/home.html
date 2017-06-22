@@ -1,0 +1,18 @@
+<div ng-controller = 'commentController'>
+  <a href="#/calendar">Calendar</a>
+  <h1>Family Planner Dashboard</h1>
+  <form ng-submit='addComment()'>
+    <p>
+      Comment: <input type='text' ng-model = 'newComment.comment'>
+    </p>
+    <input type="submit" value="Add Comment">
+  </form>
+  <h3>Comments</h3>
+  <table>
+    <tr ng-repeat = 'comment in comments'>
+      <td>
+        {{comment.comment}}
+      </td>
+    </tr>
+  </table>
+</div>
